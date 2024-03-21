@@ -1,0 +1,129 @@
+.footer
+    background-color: $bg-noir
+    height: 50rem
+    padding-top: 5rem
+
+    &__container
+        width: 100%
+        max-width: 1500px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        &_titre
+            text-align: center
+            font-size: 2.5rem
+            font-family: 'Rosarivo'
+            color: $txt-blanc
+
+        &_coordonnees
+            display: flex
+            // justify-content: center
+            margin-top: 6rem
+            justify-content: space-between
+
+            &_texte1
+                color: $txt-blanc
+                font-family: 'Roboto'
+                font-size: 1.2rem
+                font-weight: 200
+
+            &_liens
+                color: $txt-blanc
+                font-family: 'Roboto'
+                font-size: 1.2rem
+
+                &_tel
+                    margin: 2rem 0
+
+                a
+                    text-decoration: none
+                    color: $txt-blanc
+                a:hover
+                    color: $txt-vert
+
+            &_texte2
+                color: $txt-blanc
+                font-family: 'Roboto'
+                font-size: 1.2rem
+                font-weight: 200
+
+        &_reseau
+            display: flex
+            justify-content: center
+            margin-top: 10rem    
+          
+
+            &_card
+                width: fit-content
+                height: fit-content
+                background-color: $bg-noir
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 25px 25px
+                gap: 20px
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055)
+
+
+                &_socialContainer
+                    width: 52px
+                    height: 52px
+                    background-color: rgb(44, 44, 44)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    overflow: hidden
+                    transition-duration: .3s
+
+                    
+                &_socialContainer:hover .socialSvg
+                    animation: slide-in-top 0.3s both
+                &_socialContainer:active
+                    transform: scale(0.9)
+                    transition-duration: .3s  
+        &_copyright
+            margin-top: 3rem
+            text-align: center
+            color: $txt-blanc
+            font-family: 'Roboto'
+            font-size: 1.2rem
+            // margin-top: 10rem
+
+.containerOne:hover
+    background-color: #d62976
+    transition-duration: .3s
+
+/* twitter*/
+.containerTwo:hover
+    background-color: #00acee
+    transition-duration: .3s
+
+/* linkdin*/
+.containerThree:hover
+    background-color: #0072b1
+    transition-duration: .3s
+
+/* Whatsapp*/
+.containerFour:hover
+    background-color: #128C7E
+    transition-duration: .3s
+
+
+.socialSvg
+    width: 17px
+
+.socialSvg path
+    fill: rgb(255, 255, 255)
+
+
+
+@keyframes slide-in-top
+    0%
+        transform: translateY(-50px)
+        opacity: 0
+
+    100%
+        transform: translateY(0)
+        opacity: 1 
+
+    

@@ -1,0 +1,114 @@
+.formation1
+
+    &__banniere
+        height: 25rem
+        background-repeat: no-repeat
+        background-size: cover
+
+        &_overlay
+
+            background-color: rgba(0,0 ,0 , 70%)
+            height: 25rem
+
+            h1
+                color: $txt-blanc
+                text-align: center
+                font-family: 'Rosarivo italic'
+                padding-top: 10rem
+
+    &__presentation
+        margin-top: 5rem
+        margin-bottom: 5rem
+
+        &_container
+            width: 100%
+            max-width: 1200px
+            margin-inline: auto
+            padding-inline: 1rem
+
+            h1
+                text-align: center
+                font-family: 'Rosarivo italic'
+                font-size: 3rem
+                color: $txt-bleu
+
+            p
+                text-align: center
+                margin-top: 2rem
+                color: $txt-bleu
+
+.formation2
+
+    &__box
+        background-color: $bg-bleu-fonce
+
+        padding: 3rem 0 3rem 0
+
+        &_container
+
+            width: 100%
+            max-width: 1200px
+            margin-inline: auto
+            padding-inline: 1rem
+
+            &_titre
+                h1
+                    text-align: center
+                    font-family: 'Rosarivo italic'
+                    color: $txt-blanc
+                    font-size: 3rem
+                    margin-bottom: 2rem
+        
+        &_container2
+            width: 100%
+            max-width: 1200px
+            margin-inline: auto
+            padding-inline: 1rem
+
+            &_4poles
+                margin-top: 4rem
+                display: grid
+                grid-template-columns: repeat(4,1fr)
+                // border: red solid 1px
+                gap: 1rem
+                height: 35rem
+
+                
+
+                &_pole
+                    border: 4px $bg-blanc solid
+
+                    &_overlay
+                        background-color: rgba(14, 13, 13, 58%)
+                        height: 35rem
+                        display: flex
+                        justify-content: center
+                        flex-direction: column
+                        justify-content: space-around
+
+                        &_textes
+                            display: flex
+                            justify-content: center
+                            padding: 3rem
+                            h1
+                                color: $txt-blanc
+                                font-family: 'Rosarivo'
+                                font-weight: 500
+                                font-size: 1.2rem
+
+                        &_bouton
+                            // border: blue solid 3px
+
+                            text-align: center
+
+                            a
+                                text-decoration: none
+                                color: $txt-blanc
+                                border: 2.5px #fff solid
+                                width: 8.5rem
+                                padding: 1.4rem 2.3rem
+                                font-family: 'Roboto'
+                            a:hover
+                                color: $txt-bleu
+                                // border: 2.5px $txt-rouge solid
+                                background-color: $bg-blanc

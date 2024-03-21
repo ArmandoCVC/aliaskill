@@ -1,0 +1,154 @@
+.accueil1
+
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        &_box1
+            margin-top: 5rem
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            // border: red solid 1px
+            height: 25rem
+
+            &_textes
+                padding: 1rem 2.5rem 0 0
+                h1
+                    font-family: 'Rosarivo'
+                    color: $txt-bleu
+                    font-size: 2.5rem
+                p
+                    margin-top: 1rem
+                    font-family: 'Roboto'
+                    font-size: 1.1rem
+            &_img
+
+                img
+                    border-radius: 25px
+                    height: 100%
+
+        &_box2
+            margin-top: 5rem
+            margin-bottom: 5rem
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            // border: red solid 1px
+            height: 25rem
+
+            &_img
+              
+                img  
+                    height: 100%
+                    
+            &_textes
+                padding: 2rem
+                background-color: $bg-vert
+                height: auto
+    
+                h1
+                    font-family: 'Rosarivo'
+                    color: $txt-blanc
+                    font-size: 2.2rem
+
+                p
+                    margin-top: 1rem
+                    font-family: 'Roboto'
+                    font-size: 1rem
+                    color: $txt-blanc
+
+.accueil2  
+
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        &_textes
+
+            h1
+                text-align: center
+                margin-bottom: 3rem
+                font-family: 'Rosarivo'
+                font-size: 2.5rem
+                color: $txt-bleu
+            p
+                text-align: center
+                font-family: 'Roboto'
+                font-size: 1.2rem
+        &_4poles
+            margin-top: 5rem
+            display: grid
+            grid-template-columns: repeat(5,1fr)
+            // border: red solid 1px
+            gap: 0.5rem
+            height: 35rem
+
+            &_pole
+
+                &_overlay
+                    background-color: rgba(14, 13, 13, 58%)
+                    height: 35rem
+                    display: flex
+                    justify-content: center
+                    flex-direction: column
+                    justify-content: space-around
+
+                    &_textes
+                        display: flex
+                        justify-content: center 
+                        padding: 3rem  
+                        h1
+                            color: $txt-blanc
+                            font-family: 'Rosarivo'
+                            font-weight: 500
+                            font-size: 1.2rem
+
+                    &_boutton
+                        // border: blue solid 3px
+                        
+                        text-align: center
+
+                        a
+                            text-decoration: none
+                            color: $txt-blanc  
+                            border: 2.5px #fff solid
+                            width: 8.5rem
+                            padding: 1.4rem 2.3rem
+                            font-family: 'Roboto'
+                        a:hover
+                            color: $txt-blanc  
+                            // border: 2.5px $txt-rouge solid
+                            background-color: $bg-vert
+                           
+
+.accueil3
+
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        &_textes
+            margin-top: 5rem
+
+            h1
+                color: $txt-vert
+                font-size: 2.5rem
+                font-family: 'Rosarivo'
+                text-align: center
+                margin-bottom: 0.5rem
+
+            &_barre
+                border: $bg-vert 3px solid
+                margin-bottom: 5rem
+
+        &_partenaires
+            display: grid
+            grid-template-columns: repeat(4,1fr)
+            // border: red solid 1px
+            gap: 2rem
+            margin-bottom: 5rem

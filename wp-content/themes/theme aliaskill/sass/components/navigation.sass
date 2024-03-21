@@ -1,0 +1,67 @@
+.nav-header
+    height: 90vh
+
+    &__overlay
+        background-color: rgba(2, 2, 2, 75%)
+        height: 90vh
+
+        display: flex
+        justify-content: center
+        flex-direction: column
+        justify-content: space-around
+        
+        &_box-logo
+            display: flex
+            justify-content: center
+             
+            &_logo
+                width: 10rem
+               
+
+        &_nomlogo
+            font-family: 'Rosarivo'
+            font-size: 2.5rem
+            color: $txt-blanc
+            display: flex
+            justify-content: center
+            
+        &_menus
+
+            display: flex
+            justify-content: center
+        
+            ul
+                display: flex
+       
+                li
+                    margin-right: 2rem
+                    margin-left: 2rem
+
+                    a
+                        font-family: 'Roboto'
+                        font-weight: 300
+                        text-decoration: none
+                        font-size: 1.6rem
+                        color: $txt-blanc
+
+                .current_page_item a
+                    color: $txt-vert
+
+
+.bandes-bleu
+    background-color: $bg-bleu    
+    padding: 1.7rem
+
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        display: flex
+        justify-content: center
+
+        p
+            color: $txt-blanc
+            font-family: 'Rosarivo italic'
+            font-size: 1.5rem
