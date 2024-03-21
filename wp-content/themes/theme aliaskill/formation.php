@@ -43,7 +43,7 @@
 
                     <?php foreach ($terms as $term) : ?>
 
-                        <div class="formation2__box_container2_4poles_pole" style="background-image: url('<?php the_field('formation__section2_carte_img'); ?>'); background-size:cover; background-position:center; ">
+                        <div class="formation2__box_container2_4poles_pole" style="background-image: url('<?php the_field('formation__section2_carte_img', $term); ?>'); background-size:cover; background-position:center; ">
 
                             <div class="formation2__box_container2_4poles_pole_overlay">
 
