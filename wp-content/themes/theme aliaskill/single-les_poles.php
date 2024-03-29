@@ -144,9 +144,101 @@
 
     </article>
 
+
+
 </section>
 
+<section class="pole3">
 
+    <div class="pole3__container">
+
+        <div class="pole3__container_titre">
+            <h1>Les Témoignages</h1>
+        </div>
+
+        <div class="pole3__container_temoignage">
+
+            <?php if (have_rows('pole-contenue_temoignage')) : ?>
+                <?php while (the_repeater_field('pole-contenue_temoignage')) : ?>
+
+
+                    <?php the_sub_field('pole-contenue_temoignage'); ?>
+
+                    <div class="pole3__container_temoignage_carte">
+                        <div class="pole3__container_temoignage_carte_avis">
+                            <p> <?php the_sub_field('pole-contenue_temoignage_avis'); ?></p>
+                        </div>
+
+                        <div class="pole3__container_temoignage_carte_nom">
+                            <h1><?php the_sub_field('pole-contenue_temoignage_nom'); ?></h1>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+            <?php else : ?>
+            <?php endif; ?>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pole4">
+
+    <div class="pole4__container">
+
+        <div class="pole4__container_titre">
+            <h1>Les autres domaines de formations</h1>
+        </div>
+
+        <div class="pole4__container_4poles">
+
+            <?php
+            // Récupérer l'ID du produit actuellement affiché
+            $current_product_id = get_the_ID();
+
+            // Args pour la requête WP_Query
+            $args = array(
+                'post_type'      => 'les_poles',
+                'posts_per_page' => 4,
+                'orderby'        => 'date',
+                'order'          => 'DESC',
+                'post__not_in'   => array($current_product_id), // Exclure le produit actuel
+            );
+            ?>
+
+            <?php $the_query = new WP_Query($args); ?>
+
+            <?php if ($the_query->have_posts()) : ?>
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                    <div class="pole4__container_4poles_pole" style="background-image: url('<?php the_field('pole_img'); ?>'); background-size:cover; background-position:center; ">
+
+                        <div class="pole4__container_4poles_pole_overlay">
+
+                            <div class="pole4__container_4poles_pole_overlay_textes">
+                                <h1> <?php the_title(); ?> </h1>
+                            </div>
+
+                            <div class="pole4__container_4poles_pole_overlay_boutton">
+                                <a href="<?php the_field('pole_lienbouton'); ?>">Détail</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php wp_reset_query(); ?>
+            <?php wp_reset_postdata(); ?>
+        </div>
+
+    </div>
+
+</section>
 
 
 

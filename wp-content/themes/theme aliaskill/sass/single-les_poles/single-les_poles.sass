@@ -263,3 +263,114 @@
                     color: $txt-blanc
                     font-size: 1rem
                     font-weight: 300
+
+.pole3
+
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        &_titre
+            text-align: center
+            font-size: 2.5rem
+            font-family: 'Roboto'
+            color: $txt-bleu
+            font-weight: 500
+            margin-top: 4rem
+
+        &_temoignage
+            display: grid
+            grid-template-columns: repeat(3,1fr)
+            gap: 2rem
+            margin-top: 4rem
+
+            &_carte
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+                border-radius: 25px
+                // padding: 1rem
+
+                &_avis
+                    p
+                        font-family: 'Roboto'
+                        font-size: 1rem
+                        color: $txt-bleu
+
+                &_nom
+                    background-color: $bg-vert
+                    width: 100%
+                    height: 3rem
+                    padding: 0.5rem 0 0 0
+                    border-bottom-left-radius: 25px
+                    border-bottom-right-radius: 25px
+
+                    h1
+                        text-align: center
+                        font-family: 'Roboto'
+                        font-size: 1.5rem
+                        color: $txt-blanc
+                        font-weight: 300
+.pole4
+
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        &_titre
+            text-align: center
+            font-size: 2.5rem
+            font-family: 'Roboto'
+            color: $txt-bleu
+            font-weight: 500
+            margin-top: 4rem
+
+        &_4poles
+
+            margin-top: 4rem
+            margin-bottom: 4rem
+            display: grid
+            grid-template-columns: repeat(4,1fr)
+                    // border: red solid 1px
+            gap: 1rem
+            height: 35rem
+
+            &_pole
+
+                &_overlay
+                    background-color: rgba(14, 13, 13, 58%)
+                    height: 35rem
+                    display: flex
+                    justify-content: center
+                    flex-direction: column
+                    justify-content: space-around
+
+                    &_textes
+                        display: flex
+                        justify-content: center
+                        padding: 3rem
+                        h1
+                            color: $txt-blanc
+                            font-family: 'Roboto'
+                            font-family: 700
+
+                            font-size: 1.2rem
+
+                    &_boutton
+                        // border: blue solid 3px
+
+                        text-align: center
+
+                        a
+                            text-decoration: none
+                            color: $txt-blanc
+                            border: 2.5px #fff solid
+                            width: 8.5rem
+                            padding: 1.4rem 2.3rem
+                            font-family: 'Roboto'
+                        a:hover
+                            color: $txt-blanc
+                            // border: 2.5px $txt-rouge solid
+                            background-color: $bg-bleu

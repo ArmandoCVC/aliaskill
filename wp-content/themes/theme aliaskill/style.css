@@ -418,7 +418,7 @@ Version: 1.3
 }
 .home .accueil2__container_4poles_pole_overlay_boutton a:hover {
   color: #fff;
-  background-color: #4B6D49;
+  background-color: #0D3F6B;
 }
 .home .accueil3__container {
   width: 100%;
@@ -698,6 +698,108 @@ Version: 1.3
   color: #fff;
   font-size: 1rem;
   font-weight: 300;
+}
+
+.pole3__container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+.pole3__container_titre {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Roboto";
+  color: #0D3F6B;
+  font-weight: 500;
+  margin-top: 4rem;
+}
+.pole3__container_temoignage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.pole3__container_temoignage_carte {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+}
+.pole3__container_temoignage_carte_avis p {
+  font-family: "Roboto";
+  font-size: 1rem;
+  color: #0D3F6B;
+}
+.pole3__container_temoignage_carte_nom {
+  background-color: #4B6D49;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 0 0 0;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.pole3__container_temoignage_carte_nom h1 {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.pole4__container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+.pole4__container_titre {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Roboto";
+  color: #0D3F6B;
+  font-weight: 500;
+  margin-top: 4rem;
+}
+.pole4__container_4poles {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  height: 35rem;
+}
+.pole4__container_4poles_pole_overlay {
+  background-color: rgba(14, 13, 13, 0.58);
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.pole4__container_4poles_pole_overlay_textes {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+.pole4__container_4poles_pole_overlay_textes h1 {
+  color: #fff;
+  font-family: "Roboto";
+  font-family: 700;
+  font-size: 1.2rem;
+}
+.pole4__container_4poles_pole_overlay_boutton {
+  text-align: center;
+}
+.pole4__container_4poles_pole_overlay_boutton a {
+  text-decoration: none;
+  color: #fff;
+  border: 2.5px #fff solid;
+  width: 8.5rem;
+  padding: 1.4rem 2.3rem;
+  font-family: "Roboto";
+}
+.pole4__container_4poles_pole_overlay_boutton a:hover {
+  color: #fff;
+  background-color: #0D3F6B;
 }
 
 .equipe1__banniere {
