@@ -8,6 +8,8 @@
 
         &_box1
             margin-top: 5rem
+            // margin-bottom: 5rem
+
             display: grid
             grid-template-columns: repeat(2,1fr)
             // border: red solid 1px
@@ -16,21 +18,23 @@
             &_textes
                 padding: 1rem 2.5rem 0 0
                 h1
-                    font-family: 'Rosarivo'
+                    font-family: 'Roboto'
+                    font-family: 700
                     color: $txt-bleu
                     font-size: 2.5rem
                 p
-                    margin-top: 1rem
+
                     font-family: 'Roboto'
-                    font-size: 1.1rem
+                    font-size: 1rem
+                    font-weight: 400
             &_img
 
                 img
                     border-radius: 25px
-                    height: 100%
+                    // height: 100%
 
         &_box2
-            margin-top: 5rem
+            // margin-top: 5rem
             margin-bottom: 5rem
             display: grid
             grid-template-columns: repeat(2,1fr)
@@ -38,17 +42,18 @@
             height: 25rem
 
             &_img
-              
-                img  
+
+                img
                     height: 100%
-                    
+
             &_textes
                 padding: 2rem
                 background-color: $bg-vert
                 height: auto
-    
+
                 h1
-                    font-family: 'Rosarivo'
+                    font-family: 'Roboto'
+                    font-family: 700
                     color: $txt-blanc
                     font-size: 2.2rem
 
@@ -57,8 +62,63 @@
                     font-family: 'Roboto'
                     font-size: 1rem
                     color: $txt-blanc
+                    font-weight: 400
+        &_presentation
+            margin-bottom: 5rem
+            h1
+                text-align: center
+                margin-top: 1rem
+                font-size: 2.5rem
+                font-family: 'Roboto'
+                color: $txt-bleu
+            p
+                margin-top: 1rem
+                font-family: 'Roboto'
+                font-size: 1rem
+                color: $txt-bleu
+                font-weight: 400
+                text-align: center
 
-.accueil2  
+        &_icones
+            display: grid
+            grid-template-columns: repeat(3,1fr)
+            // border: red solid 1px
+            gap: 3rem
+            margin-bottom: 5rem
+
+            &_carte
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+                border-radius: 25px
+                padding: 1rem
+
+                &_img
+                    display: flex
+                    justify-content: center
+
+                    &_svg1
+                        width: 7rem
+                        fill: #ffd43b
+                    &_svg2
+                        width: 7rem
+                        fill: $bg-vert
+                    &_svg3
+                        width: 7rem
+                        fill: #74c0fc
+
+                &_textes
+
+                    h1
+                        text-align: center
+                        margin-top: 1rem
+                        font-size: 1.9rem
+                        font-family: 'Roboto'
+                        color: $txt-bleu
+                    p
+                        text-align: center
+                        font-family: 'Roboto'
+                        font-weight: 400
+
+.accueil2
 
     &__container
         width: 100%
@@ -70,14 +130,17 @@
 
             h1
                 text-align: center
-                margin-bottom: 3rem
-                font-family: 'Rosarivo'
+                // margin-bottom: 3rem
+                font-family: 'Roboto'
+                font-family: 700
                 font-size: 2.5rem
                 color: $txt-bleu
             p
                 text-align: center
                 font-family: 'Roboto'
-                font-size: 1.2rem
+                font-size: 1rem
+                font-weight: 400
+
         &_4poles
             margin-top: 5rem
             display: grid
@@ -98,31 +161,31 @@
 
                     &_textes
                         display: flex
-                        justify-content: center 
-                        padding: 3rem  
+                        justify-content: center
+                        padding: 3rem
                         h1
                             color: $txt-blanc
-                            font-family: 'Rosarivo'
-                            font-weight: 500
+                            font-family: 'Roboto'
+                            font-family: 700
+
                             font-size: 1.2rem
 
                     &_boutton
                         // border: blue solid 3px
-                        
+
                         text-align: center
 
                         a
                             text-decoration: none
-                            color: $txt-blanc  
+                            color: $txt-blanc
                             border: 2.5px #fff solid
                             width: 8.5rem
                             padding: 1.4rem 2.3rem
                             font-family: 'Roboto'
                         a:hover
-                            color: $txt-blanc  
+                            color: $txt-blanc
                             // border: 2.5px $txt-rouge solid
                             background-color: $bg-vert
-                           
 
 .accueil3
 
@@ -134,21 +197,28 @@
 
         &_textes
             margin-top: 5rem
-
+            margin-bottom: 5rem
             h1
-                color: $txt-vert
+                color: $txt-bleu
                 font-size: 2.5rem
-                font-family: 'Rosarivo'
+                font-family: 'Roboto'
+                font-weight: 500
                 text-align: center
-                margin-bottom: 0.5rem
-
-            &_barre
-                border: $bg-vert 3px solid
-                margin-bottom: 5rem
+            p
+                color: $txt-bleu
+                font-family: 'Roboto'
+                font-weight: 400
 
         &_partenaires
             display: grid
-            grid-template-columns: repeat(4,1fr)
+            grid-template-columns: repeat(3,1fr)
             // border: red solid 1px
-            gap: 2rem
+            // gap: 1rem
             margin-bottom: 5rem
+
+            &_img
+                display: flex
+                justify-content: center
+                img
+                    border-radius: 20px
+

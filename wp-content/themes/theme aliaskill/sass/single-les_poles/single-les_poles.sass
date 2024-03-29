@@ -1,98 +1,97 @@
 .pole1
 
     &__banniere
-        height: 25rem
-        background-repeat: no-repeat
-        background-size: cover
+        height: 15rem
+        background-color: $bg-bleu
+        padding: 3rem 0 0 0
 
-        &_overlay
-
-            background-color: rgba(0,0 ,0 , 70%)
-            height: 25rem
-
-            h1
-                color: $txt-blanc
-                text-align: center
-                font-family: 'Rosarivo italic'
-                padding-top: 10rem
-
-            &_container
-                width: 100%
-                max-width: 1200px
-                margin-inline: auto
-                padding-inline: 1rem
+        &_container
+            width: 100%
+            max-width: 1200px
+            margin-inline: auto
+            padding-inline: 1rem
 
                 // padding: 2.5rem 0
+            &_titre
 
-                &_titre
-                    // border: 1px #ff0000    solid
-                    padding-bottom: 3rem
-                    h1
-                        color: $txt-blanc
-                        text-align: center
+                color: $txt-blanc
+                text-align: center
+                font-weight: 500
+                font-size: 2.5rem
+                font-family: 'Roboto'
 
-                        font-size: 2.5rem
-                        font-family: 'Rosarivo italic'
+            &_box
+                margin-top: 3rem
 
-                &_box
-       
+                display: flex
+                justify-content: space-between
+                // border: 1px #ff0000 solid
+                align-items: center
+
+                &_duree
                     display: flex
+                    // border: 1px #000000 solid
+
+                    width: min-content
                     justify-content: space-between
-                    // border: 1px #ff0000    solid
                     align-items: center
 
-                    &_duree
+                    &_icones1
                         display: flex
-
-                        width: min-content
-                        justify-content: space-between
                         align-items: center
+                        margin-right: 3rem
 
-                        &_icones1
-                            display: flex
-                            align-items: center
-                            margin-right: 3rem
+                        svg
+                            width: 4rem
+                            fill: $bg-blanc
+                            margin-right: 0.5rem
 
-                            p
-                                color: $txt-blanc
-                                margin-left: 3rem
-                                width: 100%
-                                font-family: 'Roboto'
-                                margin-top: 1rem
-
-                        &_icones2
-                            display: flex
-                            align-items: center
-                            margin-right: 3rem
-
-                            p
-                                color: $txt-blanc
-                                margin-left: 3rem
-                                width: 100%
-                                font-family: 'Roboto'
-                                margin-top: 1rem
-
-                    &_boutton
-                        display: flex
-                        justify-content: center
-
-                        a
-                            text-decoration: none
+                        p
                             color: $txt-blanc
+                            // margin-left: 3rem
+                            width: 100%
                             font-family: 'Roboto'
-                            font-size: 1.2rem
+                            margin-top: 1rem
 
-                            border: 1px $bg-blanc solid
-                            padding: 1.2rem 2rem
-                        a:hover
-                            background-color: $bg-vert
+                    &_icones2
+                        display: flex
+                        align-items: center
+                        // margin-right: 3rem
+
+                        svg
+                            width: 4rem
+                            fill: $bg-blanc
+                            margin-right: 0.5rem
+
+                        p
                             color: $txt-blanc
+                                // margin-left: 3rem
+                            width: 100%
+                            font-family: 'Roboto'
+                            margin-top: 1rem
+
+                &_boutton
+                    display: flex
+                    justify-content: center
+
+                    a
+                        text-decoration: none
+                        color: $txt-bleu
+                        background-color: $bg-blanc
+                        font-family: 'Roboto'
+                        font-size: 1rem
+                        // border-radius: 5px
+                        border: 1px $bg-blanc solid
+                        padding: 1rem 2rem
+
+                    a:hover
+                        background-color: $bg-bleu
+                        color: $txt-blanc
 
 .pole2
 
     &__article1
         margin-top: 5rem
-        margin-bottom: 5rem
 
         &_container
             width: 100%
@@ -102,22 +101,81 @@
 
             display: grid
             grid-template-columns: repeat(2,1fr)
-
+            // gap: 0rem
             &_textes
                 padding: 2rem 0
+                // border: 1px red solid
 
                 h1
-                    font-family: 'Rosarivo italic'
+                    font-family: 'Roboto'
                     color: $txt-bleu
+                    font-weight: 500
                     font-size: 2.5rem
-                    margin-bottom: 2rem
+                    // margin-bottom: 2rem
+                    text-align: center
 
                 p
                     font-family: 'Roboto'
                     color: $txt-bleu
                     font-size: 1rem
+                    font-weight: 400
+                    text-align: center
+            &_img
+                img
+                    border-radius: 25px
+
     &__article2
         margin-top: 5rem
+        margin-bottom: 5rem
+        // background-color: $bg-vert
+
+        &_container
+            width: 100%
+            max-width: 1200px
+            margin-inline: auto
+            padding-inline: 1rem
+
+            &_icones
+                display: grid
+                grid-template-columns: repeat(3,1fr)
+                // border: red solid 1px
+                gap: 3rem
+                margin-bottom: 5rem
+
+                &_carte
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+                    border-radius: 25px
+                    padding: 4rem 1rem 1rem 1rem
+                    height: 30rem
+
+                    &_img
+                        display: flex
+                        justify-content: center
+
+                        &_svg1
+                            width: 7rem
+                            fill: #ffd43b
+                        &_svg2
+                            width: 7rem
+                            fill: $bg-vert
+                        &_svg3
+                            width: 7rem
+                            fill: #74c0fc
+
+                    &_textes
+
+                        h1
+                            text-align: center
+                            margin-top: 1rem
+                            font-size: 1.9rem
+                            font-family: 'Roboto'
+                            color: $txt-bleu
+                        p
+                            text-align: center
+                            font-family: 'Roboto'
+                            font-weight: 400
+    &__article3
+        // margin-top: 5rem
         margin-bottom: 5rem
         background-color: $bg-vert
 
@@ -127,61 +185,24 @@
             margin-inline: auto
             padding-inline: 1rem
 
-            display: grid
-            grid-template-columns: repeat(2,1fr)
-
             &_textes
-                padding: 2rem 0 2rem 0
+                padding: 2.5rem 0
 
                 h1
-                    font-family: 'Rosarivo italic'
+                    font-family: 'Roboto'
                     color: $txt-blanc
+                    font-weight: 500
                     font-size: 2.5rem
-                    margin-bottom: 2rem
-                    text-align: right
+                    text-align: center
 
                 p
                     font-family: 'Roboto'
                     color: $txt-blanc
                     font-size: 1rem
-                    text-align: right
-
-            &_img
-                img
-                    height: 100%
-
-    &__article3
-        margin-top: 5rem
-        margin-bottom: 5rem
-
-        &_container
-            width: 100%
-            max-width: 1200px
-            margin-inline: auto
-            padding-inline: 1rem
-
-            display: grid
-            grid-template-columns: repeat(2,1fr)
-
-            &_textes
-                padding: 1rem 0 2rem 0
-
-                h1
-                    font-family: 'Rosarivo italic'
-                    color: $txt-vert
-                    font-size: 2.5rem
-
-                    margin-bottom: 2rem
-
-                p
-                    font-family: 'Roboto'
-                    color: $txt-bleu
-                    font-size: 1rem
+                    font-weight: 300
 
     &__article4
-        margin-top: 5rem
         margin-bottom: 5rem
-        background-color: $bg-bleu
 
         &_container
             width: 100%
@@ -191,113 +212,54 @@
 
             display: grid
             grid-template-columns: repeat(2,1fr)
-
-            &_textes
-                padding: 2rem 0 2rem 0
-
-                h1
-                    font-family: 'Rosarivo italic'
-                    color: $txt-blanc
-                    font-size: 2.5rem
-                    margin-bottom: 2rem
-                    text-align: right
-
-                p
-                    font-family: 'Roboto'
-                    color: $txt-blanc
-                    font-size: 1rem
-                    text-align: right
-
+            // gap: 0rem
             &_img
                 img
-                    height: 100%
-    &__article5
-        margin-top: 5rem
-        margin-bottom: 5rem
-
-        &_container
-            width: 100%
-            max-width: 1200px
-            margin-inline: auto
-            padding-inline: 1rem
-
-            display: grid
-            grid-template-columns: repeat(2,1fr)
+                    border-radius: 25px
 
             &_textes
                 padding: 2rem 0
+                // border: 1px red solid
 
                 h1
-                    font-family: 'Rosarivo italic'
+                    font-family: 'Roboto'
                     color: $txt-bleu
+                    font-weight: 500
                     font-size: 2.5rem
-                    margin-bottom: 2rem
+                    // margin-bottom: 2rem
+                    text-align: center
 
                 p
                     font-family: 'Roboto'
                     color: $txt-bleu
                     font-size: 1rem
-.pole3
-
-    &__carre
-        background-color: $bg-bleu-fonce
-        color: $txt-blanc
-        padding: 4rem 0
+                    font-weight: 400
+                    text-align: center
+    &__article5
+        margin-top: 5rem
+        // margin-bottom: 5rem
+        // background-color: $bg-bleu
 
         &_container
             width: 100%
             max-width: 1200px
             margin-inline: auto
             padding-inline: 1rem
+            background-color: $bg-bleu
+            border-radius: 25px
 
-            &_avis
-                display: grid
-                grid-template-columns: repeat(2,1fr)
-                align-items: center
-                // border: 1px #ff7708 solid
+            &_textes
+                padding: 2.5rem 0
 
-                &_box1
+                h1
+                    font-family: 'Roboto'
+                    color: $txt-blanc
+                    font-weight: 500
+                    font-size: 2.5rem
+                    text-align: center
 
-                    &_logo
-                        // border: #fff solid 1px
-
-                        display: flex
-                        justify-content: center
-
-                        img
-                            border: #fff solid 15px
-                            width: 20rem
-                            border-radius: 50% 30%
-                    &_nom-logo
-                        // border: 1px #be0b0b solid
-
-                        margin-top: 2rem
-
-                        h1
-                            text-align: center
-                            font-size: 2.4rem
-                            font-family: 'Rosarivo italic'
-
-                    &_etoiles
-                        margin-top: 2rem
-                        display: flex
-                        justify-content: center
-                        // border: 1px #00dfd3 solid
-
-                &_box2
-                    margin: 4.5rem 0 0 0
-                    &_titre
-                        // border: 1px #ff03d5 solid
-
-                        h1
-                            font-size: 2.4rem
-                            font-family: 'Rosarivo italic'
-                            text-align: center
-
-                    &_description
-                        // border: 1px #e2e20e solid
-
-                        height: 15rem
-                        p
-                            font-size: 1.7rem
-                            font-weight: 300
+                p
+                    font-family: 'Roboto'
+                    color: $txt-blanc
+                    font-size: 1rem
+                    font-weight: 300

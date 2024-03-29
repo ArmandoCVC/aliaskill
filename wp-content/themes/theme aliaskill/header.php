@@ -22,35 +22,38 @@
 
     <header class="nav-header" style="background-image: url('<?php the_field('header__wallpaper'); ?>'); background-position:center;">
         <div class="nav-header__overlay">
-            <div class="nav-header__overlay_box-logo">
-                <div class="nav-header__overlay_box-logo_logo" id="logo"><?php afficher_logo(); ?></div>
+
+            <div class="nav-header__overlay_container">
+                <div class="nav-header__overlay_container_box-logo">
+                    <div class="nav-header__overlay_container_box-logo_logo" id="logo"><?php afficher_logo(); ?></div>
+
+                    <nav class="nav-header__overlay_container_box-logo_menus">
+
+                        <?php
+
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'main-navigation',
+                                'container' => 'nav',
+                                'container_class' => 'nav',
+                                'menu_class' => 'ul'
+                            )
+                        );
+
+                        ?>
+
+                    </nav>
+                </div>
+
+                <div class="nav-header__overlay_container_textes">
+                    <h1><?php the_field('header__nomlogo'); ?></h1>
+                    <p><?php the_field('header__txt'); ?></p>
+                    
+                    <div class="nav-header__overlay_container_textes_bouton">
+                        <a href="<?php the_field('header__lienpage'); ?>">Prendre Rendez-vous</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="nav-header__overlay_nomlogo">
-                <h1><?php the_field('header__nomlogo'); ?></h1>
-            </div>
-
-            <nav class="nav-header__overlay_menus">
-
-                <?php
-
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'main-navigation',
-                        'container' => 'nav',
-                        'container_class' => 'nav',
-                        'menu_class' => 'ul'
-                    )
-                );
-
-                ?>
-
-            </nav>
         </div>
     </header>
-
-    <div class="bandes-bleu">
-        <div class="bandes-bleu__container">
-            <p><?php the_field('header__txt'); ?></p>
-        </div>
-    </div>
