@@ -4,11 +4,7 @@
 
 <section class="formation1">
 
-    <div class="formation1__banniere" style="background-image:url('<?php the_field('formation__banniere_img'); ?>');">
-        <div class="formation1__banniere_overlay">
-            <h1><?php the_field('formation__banniere_titre'); ?></h1>
-        </div>
-    </div>
+
 
     <div class="formation1__presentation">
         <div class="formation1__presentation_container">
