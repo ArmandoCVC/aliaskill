@@ -1,47 +1,4 @@
-.module1
-
-    &__banniere
-        height: 25rem
-        background-repeat: no-repeat
-        background-size: cover
-
-        &_overlay
-
-            background-color: rgba(0,0 ,0 , 70%)
-            height: 25rem
-
-            h1
-                color: $txt-blanc
-                text-align: center
-                font-family: 'Rosarivo italic'
-                padding-top: 10rem
-
-    &__presentation
-        margin-top: 5rem
-        margin-bottom: 5rem
-
-        &_container
-            width: 100%
-            max-width: 1200px
-            margin-inline: auto
-            padding-inline: 1rem
-
-            h1
-                text-align: center
-                font-family: 'Roboto'
-                font-size: 3rem
-                color: $txt-bleu
-
-            p
-                text-align: center
-                margin-top: 2rem
-                color: $txt-bleu
-                font-family: 'Roboto'
-
-.module2
-    // background-color: $bg-bleu-fonce
-
-    padding: 7rem 0 3rem 0
+.modules1
 
     &__container
         width: 100%
@@ -49,37 +6,99 @@
         margin-inline: auto
         padding-inline: 1rem
 
-        &_contenue
+        &_box1
+            margin-top: 5rem
+            // margin-bottom: 5rem
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            // border: red solid 1px
+            height: 25rem
+
+            &_img
+
+                img
+                    height: 100%
+                    border-top-left-radius: 25px
+                    border-bottom-left-radius: 25px
+
+            &_textes
+                padding: 2rem
+                background-color: $bg-vert
+                height: auto
+                border-top-right-radius: 25px
+                border-bottom-right-radius: 25px
+
+                h1
+                    font-family: 'Roboto'
+                    font-family: 500
+                    color: $txt-blanc
+                    font-size: 2.2rem
+
+                p
+                    margin-top: 1rem
+                    font-family: 'Roboto'
+                    font-size: 1rem
+                    color: $txt-blanc
+                    font-weight: 300
+
+.module2
+    margin-top: 5rem
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
+
+        &_grid
             display: grid
             grid-template-columns: repeat(3,1fr)
             gap: 3rem
             margin-bottom: 5rem
 
             &_carte
+                // background-color: $bg-bleu
                 // border: 1px red solid
-                // height: 20rem
+                // padding: 2rem 1rem
 
-                &_img
-                    img
-                        border-radius: 40px
+                &_haut
+                    background-color: $bg-bleu
+                    height: 10rem
+                    // padding: 1rem
+                    &_overlay
+                        background-color: rgba(0,0,0,55%)
+                        height: 10rem
+                        padding: 3rem 1rem 0 1rem
 
-                &_textes
-                    // margin-top: 2rem
-                    padding: 2rem 1rem 1rem
-                    h1
-                        font-size: 1.4rem
-                        font-family: 'Roboto'
-                        color: $txt-bleu
+
+                        &_titre
+                            // padding-top: 1rem
+                            display: flex
+                            justify-content: center
+                            h1
+                                
+                                font-family: 'Roboto'
+                                font-weight: 500
+                                font-size: 1.5rem
+                                color: $txt-blanc
+                &_bas
+                    // height: 3rem
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+                    padding: 1rem 0
+                    // border: solid red 1px
 
                     &_bouton
-                        margin-top: 2rem
+                        display: flex
+                        justify-content: center
                         a
-                            border: 2px $bg-bleu solid
-                            border-radius: 5px
-                            background-color: $bg-blanc
-                            color: $txt-bleu
                             text-decoration: none
-                            padding: 1rem 2rem
+                            font-family: 'Roboto'
+                            color: $txt-bleu
+                            border: $bg-bleu solid 2px
+                            padding: 0.5rem 0.5rem
                         a:hover
                             background-color: $bg-bleu
                             color: $txt-blanc
+                         
+
+
+            

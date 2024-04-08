@@ -4,13 +4,20 @@
 
 <section class="formation1">
 
+    <div class="formation1__container">
 
+        <div class="formation1__container_box1">
+            <div class="formation1__container_box1_img">
+                <img src="<?php the_field('formation__section1_img'); ?>" alt="" srcset="">
+            </div>
 
-    <div class="formation1__presentation">
-        <div class="formation1__presentation_container">
-            <h1><?php the_field('formation__section1_titre'); ?></h1>
-            <p><?php the_field('formation__section1_paragraphe'); ?></p>
+            <div class="formation1__container_box1_textes">
+                <h1><?php the_field('formation__section1_titre'); ?> <span></h1> 
+                <p><?php the_field('formation__section1_paragraphe'); ?></p>
+            </div>
+
         </div>
+
 
     </div>
 

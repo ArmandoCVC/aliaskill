@@ -1,33 +1,49 @@
 .formation1
 
-    &__presentation
-        margin-top: 4rem
-        margin-bottom: 5rem
+    &__container
+        width: 100%
+        max-width: 1200px
+        margin-inline: auto
+        padding-inline: 1rem
 
-        &_container
-            width: 100%
-            max-width: 1200px
-            margin-inline: auto
-            padding-inline: 1rem
+        &_box1
+            margin-top: 5rem
+            margin-bottom: 5rem
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            // border: red solid 1px
+            height: 25rem
 
-            h1
-                text-align: center
-                font-family: 'Rosarivo italic'
-                font-size: 3rem
-                color: $txt-bleu
+            &_img
 
-            p
-                text-align: center
-                margin-top: 2rem
-                color: $txt-bleu
+                img
+                    height: 100%
+                    border-top-left-radius: 25px
+                    border-bottom-left-radius: 25px
+
+            &_textes
+                padding: 2rem
+                background-color: $bg-vert
+                height: auto
+                border-top-right-radius: 25px
+                border-bottom-right-radius: 25px
+
+                h1
+                    font-family: 'Roboto'
+                    font-family: 500
+                    color: $txt-blanc
+                    font-size: 2.2rem
+
+                p
+                    margin-top: 1rem
+                    font-family: 'Roboto'
+                    font-size: 1rem
+                    color: $txt-blanc
+                    font-weight: 300
 
 .formation2
-
+    margin-bottom: 5rem
     &__box
-        background-color: $bg-bleu-fonce
-
-        padding: 3rem 0 3rem 0
-
         &_container
 
             width: 100%
@@ -38,11 +54,12 @@
             &_titre
                 h1
                     text-align: center
-                    font-family: 'Rosarivo italic'
-                    color: $txt-blanc
-                    font-size: 3rem
+                    font-family: 'Roboto'
+                    font-weight: 500
+                    color: $txt-bleu
+                    font-size: 2.5rem
                     margin-bottom: 2rem
-        
+
         &_container2
             width: 100%
             max-width: 1200px
@@ -50,17 +67,15 @@
             padding-inline: 1rem
 
             &_4poles
-                margin-top: 4rem
+
                 display: grid
                 grid-template-columns: repeat(4,1fr)
                 // border: red solid 1px
                 gap: 1rem
                 height: 35rem
 
-                
-
                 &_pole
-                    border: 4px $bg-blanc solid
+                    // border-radius: 15px
 
                     &_overlay
                         background-color: rgba(14, 13, 13, 58%)
@@ -69,6 +84,7 @@
                         justify-content: center
                         flex-direction: column
                         justify-content: space-around
+                        // border-radius: 15px
 
                         &_textes
                             display: flex
@@ -76,7 +92,7 @@
                             padding: 3rem
                             h1
                                 color: $txt-blanc
-                                font-family: 'Rosarivo'
+                                font-family: 'Roboto'
                                 font-weight: 500
                                 font-size: 1.2rem
 
