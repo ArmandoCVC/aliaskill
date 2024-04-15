@@ -1,7 +1,6 @@
 <?php get_header() ?>
 
 
-
 <section class="modules1">
 
     <div class="modules1__container">
@@ -15,13 +14,12 @@
             <div class="modules1__container_box1_textes">
                 <?php $term = get_queried_object(); ?>
 
-                <h1><?php the_field('modules_section_titre',$term); ?> </h1>
+                <h1><?php the_field('modules_section_titre', $term); ?> </h1>
                 <h1><?php single_term_title(); ?></h1>
-                <p><?php the_field('modules_section_descriptions',$term); ?></p>
+                <p><?php the_field('modules_section_descriptions', $term); ?></p>
             </div>
 
         </div>
-
 
     </div>
 
@@ -33,33 +31,48 @@
 
         <div class="module2__container_grid">
 
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+            <?php
+            $terms = get_terms(array(
+                'taxonomy' => 'parcours',
+                'hide_empty' => true,
+            ));
+            ?>
 
-                    <article class="module2__container_grid_carte">
+            <?php foreach ($terms as $term) : ?>
 
-                        <div class="module2__container_grid_carte_haut">
-                            <div class="module2__container_grid_carte_haut_overlay">
+                <?php
+                // Récupérer les enfants du terme actuel
+                $children = get_term_children($term->term_id, 'parcours');
 
-                                <div class="module2__container_grid_carte_haut_overlay_titre">
-                                    <h1><?php the_title() ?> </h1>
+                // Vérifier s'il y a des enfants
+                if (!empty($children)) {
+                    foreach ($children as $child_id) {
+                        $child_term = get_term_by('id', $child_id, 'parcours');
+                        // Afficher les termes enfants
+                ?>
+                        <article class="module2__container_grid_carte">
+                            <div class="module2__container_grid_carte_haut">
+                                <div class="module2__container_grid_carte_haut_overlay">
+                                    <div class="module2__container_grid_carte_haut_overlay_titre">
+                                        <h1><?php echo $child_term->name; ?></h1>
+                                    </div>
                                 </div>
-
                             </div>
-                        </div>
-
-                        <div class="module2__container_grid_carte_bas">
-                            <div class="module2__container_grid_carte_bas_bouton">
-
-                                <a href="<?php the_permalink(); ?>">Voire en détails</a>
-
+                            <div class="module2__container_grid_carte_bas">
+                                <div class="module2__container_grid_carte_bas_bouton">
+                                    <a href="<?php the_permalink(); ?>    ">Voir en détails</a>
+                                </div>
                             </div>
-                        </div>
+                        </article>
+                <?php
+                    }
+                }
+                ?>
 
+            <?php endforeach; ?>
 
-                    </article>
-                <?php endwhile; ?>
-            <?php endif; ?>
+            
+
         </div>
 
     </div>

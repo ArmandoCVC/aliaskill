@@ -48,7 +48,7 @@ Version: 1.3
   height: 100vh;
 }
 .nav-header__overlay {
-  background-color: rgba(2, 2, 2, 0.75);
+  background-color: rgba(2, 2, 2, 0.6);
   height: 100vh;
   padding: 5rem 0 0 0;
 }
@@ -91,14 +91,12 @@ Version: 1.3
 }
 .nav-header__overlay_container_textes h1 {
   font-size: 4rem;
-  font-family: "Roboto";
-  font-weight: 500;
+  font-family: "Rosarivo";
   color: #fff;
 }
 .nav-header__overlay_container_textes p {
   font-size: 1.5rem;
-  font-family: "Roboto";
-  font-weight: 300;
+  font-family: "Rosarivo";
   color: #fff;
 }
 .nav-header__overlay_container_textes_bouton {
@@ -883,6 +881,61 @@ Version: 1.3
   font-family: "Roboto";
   color: #0D3F6B;
 }
+.equipe__container_article4 {
+  margin-top: 4rem;
+  background-color: #4B6D49;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 4rem;
+}
+.equipe__container_article4_haut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.equipe__container_article4_haut svg {
+  fill: #0D3F6B;
+}
+.equipe__container_article4_haut h1 {
+  font-size: 2.5rem;
+  font-family: "Roboto";
+  color: #fff;
+  margin-left: 2rem;
+}
+.equipe__container_article4_bas {
+  margin-top: 2rem;
+}
+.equipe__container_article4_bas p {
+  font-family: "Roboto";
+  color: #fff;
+}
+.equipe__container_article5 {
+  margin-top: 4rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+.equipe__container_article5_haut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.equipe__container_article5_haut svg {
+  fill: #0D3F6B;
+  width: 3rem;
+}
+.equipe__container_article5_haut h1 {
+  font-size: 2.5rem;
+  font-family: "Roboto";
+  color: #0D3F6B;
+  margin-left: 2rem;
+}
+.equipe__container_article5_bas {
+  margin-top: 2rem;
+}
+.equipe__container_article5_bas p {
+  font-family: "Roboto";
+  color: #0D3F6B;
+}
 
 .equipe-cv1__banniere {
   height: 25rem;
@@ -1464,8 +1517,11 @@ Version: 1.3
   gap: 3rem;
   margin-bottom: 5rem;
 }
+.module2__container_grid_carte {
+  border-radius: 20px;
+}
 .module2__container_grid_carte_haut {
-  background-color: #0D3F6B;
+  background-color: #4B6D49;
   height: 10rem;
 }
 .module2__container_grid_carte_haut_overlay {
@@ -1494,12 +1550,12 @@ Version: 1.3
 .module2__container_grid_carte_bas_bouton a {
   text-decoration: none;
   font-family: "Roboto";
-  color: #0D3F6B;
-  border: #0D3F6B solid 2px;
+  color: #4B6D49;
+  border: #4B6D49 solid 2px;
   padding: 0.5rem 0.5rem;
 }
 .module2__container_grid_carte_bas_bouton a:hover {
-  background-color: #0D3F6B;
+  background-color: #4B6D49;
   color: #fff;
 }
 

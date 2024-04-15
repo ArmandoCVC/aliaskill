@@ -32,6 +32,8 @@
                 <h1><?php the_field('formation__section2_titre'); ?></h1>
             </div>
 
+
+            
             <div class="formation2__box_container2">
                 <div class="formation2__box_container2_4poles">
 
@@ -40,6 +42,7 @@
                     $terms = get_terms(array(
                         'taxonomy' => 'parcours',
                         'hide_empty' => true,
+                        'parent' => 0, // Ne récupérer que les termes de plus haut niveau
                     ));
                     ?>
 
