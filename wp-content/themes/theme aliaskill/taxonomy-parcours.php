@@ -31,6 +31,8 @@
 
         <div class="module2__container_grid">
 
+
+
             <?php
             $terms = get_terms(array(
                 'taxonomy' => 'parcours',
@@ -39,7 +41,6 @@
             ?>
 
             <?php foreach ($terms as $term) : ?>
-
                 <?php
                 // Récupérer les enfants du terme actuel
                 $children = get_term_children($term->term_id, 'parcours');
@@ -48,7 +49,7 @@
                 if (!empty($children)) {
                     foreach ($children as $child_id) {
                         $child_term = get_term_by('id', $child_id, 'parcours');
-                        // Afficher les termes enfants
+                        // Afficher les termes enfants avec un lien personnalisé
                 ?>
                         <article class="module2__container_grid_carte">
                             <div class="module2__container_grid_carte_haut">
@@ -60,7 +61,7 @@
                             </div>
                             <div class="module2__container_grid_carte_bas">
                                 <div class="module2__container_grid_carte_bas_bouton">
-                                    <a href="<?php the_permalink(); ?>    ">Voir en détails</a>
+                                    <a href="<?php echo esc_url(add_query_arg('child_term', $child_term->slug)); ?>">Voir en détails</a>
                                 </div>
                             </div>
                         </article>
@@ -68,7 +69,6 @@
                     }
                 }
                 ?>
-
             <?php endforeach; ?>
 
             
