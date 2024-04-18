@@ -52,7 +52,59 @@
 
         &_grid
             display: grid
-            grid-template-columns: repeat(3,1fr)
+            grid-template-columns: repeat(2,1fr)
+            gap: 3rem
+            margin-bottom: 5rem
+
+            &_carte2
+                // background-color: $bg-bleu
+                // border: 1px red solid
+                // padding: 2rem 1rem
+                border-radius: 20px
+
+                &_haut
+                    background-color: $bg-bleu
+                    height: 10rem
+                    // padding: 1rem
+                    // border-radius: 20px
+
+                    &_overlay
+                        background-color: rgba(0,0,0,55%)
+                        height: 10rem
+                        padding: 3rem 1rem 0 1rem
+
+                        &_titre
+                            // padding-top: 1rem
+                            display: flex
+                            justify-content: center
+                            h1
+
+                                font-family: 'Roboto'
+                                font-weight: 500
+                                font-size: 1.2rem
+                                color: $txt-blanc
+                &_bas
+                    // height: 3rem
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+                    padding: 1rem 0
+                    // border: solid red 1px
+                    // border-radius: 20px
+
+                    &_bouton
+                        display: flex
+                        justify-content: center
+                        a
+                            text-decoration: none
+                            font-family: 'Roboto'
+                            color: $txt-bleu
+                            border: $bg-bleu solid 2px
+                            padding: 0.5rem 0.5rem
+                        a:hover
+                            background-color: $bg-bleu
+                            color: $txt-blanc
+        &_grid2
+            display: grid
+            grid-template-columns: repeat(2,1fr)
             gap: 3rem
             margin-bottom: 5rem
 
@@ -81,7 +133,7 @@
 
                                 font-family: 'Roboto'
                                 font-weight: 500
-                                font-size: 1.5rem
+                                font-size: 1.2rem
                                 color: $txt-blanc
                 &_bas
                     // height: 3rem
@@ -103,49 +155,4 @@
                             background-color: $bg-vert
                             color: $txt-blanc
 
-            &_carte2
-                // background-color: $bg-bleu
-                // border: 1px red solid
-                // padding: 2rem 1rem
-                border-radius: 20px
-
-                &_haut
-                    background-color: $bg-bleu
-                    height: 10rem
-                    // padding: 1rem
-                    // border-radius: 20px
-
-                    &_overlay
-                        background-color: rgba(0,0,0,55%)
-                        height: 10rem
-                        padding: 3rem 1rem 0 1rem
-
-                        &_titre
-                            // padding-top: 1rem
-                            display: flex
-                            justify-content: center
-                            h1
-
-                                font-family: 'Roboto'
-                                font-weight: 500
-                                font-size: 1.5rem
-                                color: $txt-blanc
-                &_bas
-                    // height: 3rem
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
-                    padding: 1rem 0
-                    // border: solid red 1px
-                    // border-radius: 20px
-
-                    &_bouton
-                        display: flex
-                        justify-content: center
-                        a
-                            text-decoration: none
-                            font-family: 'Roboto'
-                            color: $txt-vert
-                            border: $bg-vert solid 2px
-                            padding: 0.5rem 0.5rem
-                        a:hover
-                            background-color: $bg-vert
-                            color: $txt-blanc
+           

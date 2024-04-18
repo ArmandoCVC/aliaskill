@@ -30,50 +30,94 @@
     <div class="module2__container">
 
         <div class="module2__container_grid">
-
-
-
             <?php
-            $terms = get_terms(array(
+            // Récupérer l'ID du terme actuel
+            $current_term_id = get_queried_object_id();
+
+            // Vérifier si le terme actuel est un terme enfant
+            $parent_term_id = wp_get_term_taxonomy_parent_id(get_queried_object()->term_id, 'parcours');
+            if ($parent_term_id !== 0) {
+                // Le terme actuel est un terme enfant, on récupère et affiche les modules associés
+                $args = array(
+                    'post_type' => 'les_formations',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'parcours',
+                            'field' => 'term_id',
+                            'terms' => $current_term_id
+                        )
+                    )
+                );
+                $modules = get_posts($args);
+
+                // Afficher les modules associés au terme enfant actuel
+                foreach ($modules as $module) :
+            ?>
+                    <article class="module2__container_grid_carte2">
+                        <div class="module2__container_grid_carte2_haut">
+                            <div class="module2__container_grid_carte2_haut_overlay">
+                                <div class="module2__container_grid_carte2_haut_overlay_titre">
+                                    <h1><?php echo $module->post_title; ?></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module2__container_grid_carte2_bas">
+                            <div class="module2__container_grid_carte2_bas_bouton">
+                                <a href="<?php echo get_permalink($module->ID); ?>">Voir en détails</a>
+                            </div>
+                        </div>
+                    </article>
+            <?php
+                endforeach;
+            } else {
+                // Le terme actuel est un terme parent, donc on n'affiche pas les modules
+                echo " ";
+            }
+            ?>
+        </div>
+
+        <div class="module2__container_grid2">
+            <?php
+            // Récupérer l'ID du terme parent actuel
+            $parent_term_id = get_queried_object_id();
+
+            // Récupérer les enfants du terme parent actuel liés à ce terme parent
+            $children_args = array(
                 'taxonomy' => 'parcours',
                 'hide_empty' => true,
-            ));
+                'parent' => $parent_term_id // Récupère uniquement les enfants du terme parent actuel
+            );
+            $children = get_terms($children_args);
+
+            // Vérifier s'il y a des enfants
+            if (!empty($children)) {
+                // Afficher les enfants du terme parent actuel
             ?>
-
-            <?php foreach ($terms as $term) : ?>
-                <?php
-                // Récupérer les enfants du terme actuel
-                $children = get_term_children($term->term_id, 'parcours');
-
-                // Vérifier s'il y a des enfants
-                if (!empty($children)) {
-                    foreach ($children as $child_id) {
-                        $child_term = get_term_by('id', $child_id, 'parcours');
-                        // Afficher les termes enfants avec un lien personnalisé
-                ?>
-                        <article class="module2__container_grid_carte">
-                            <div class="module2__container_grid_carte_haut">
-                                <div class="module2__container_grid_carte_haut_overlay">
-                                    <div class="module2__container_grid_carte_haut_overlay_titre">
-                                        <h1><?php echo $child_term->name; ?></h1>
+               
+                    <?php foreach ($children as $child_term) : ?>
+                        
+                            <article class="module2__container_grid2_carte">
+                                <div class="module2__container_grid2_carte_haut">
+                                    <div class="module2__container_grid2_carte_haut_overlay">
+                                        <div class="module2__container_grid2_carte_haut_overlay_titre">
+                                            <h1><?php echo $child_term->name; ?></h1>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="module2__container_grid_carte_bas">
-                                <div class="module2__container_grid_carte_bas_bouton">
-                                    <a href="<?php echo esc_url(add_query_arg('child_term', $child_term->slug)); ?>">Voir en détails</a>
+                                <div class="module2__container_grid2_carte_bas">
+                                    <div class="module2__container_grid2_carte_bas_bouton">
+                                        <a href="<?php echo get_term_link($child_term); ?>">Voir les modules</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                <?php
-                    }
-                }
-                ?>
-            <?php endforeach; ?>
-
-            
-
+                            </article>
+                        
+                    <?php endforeach; ?>
+                
+            <?php } ?>
         </div>
+
+
+
 
     </div>
 </section>

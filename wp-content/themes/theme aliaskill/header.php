@@ -24,36 +24,55 @@
         <div class="nav-header__overlay">
 
             <div class="nav-header__overlay_container">
-                <div class="nav-header__overlay_container_box-logo">
-                    <div class="nav-header__overlay_container_box-logo_logo" id="logo"><?php afficher_logo(); ?></div>
+                <div class="nav-header__overlay_container_block">
+                    <div class="nav-header__overlay_container_block_gauche">
 
-                    <nav class="nav-header__overlay_container_box-logo_menus">
 
-                        <?php
+                        <div class="nav-header__overlay_container_block_gauche_textes">
+                            <h1><?php the_field('header__nomlogo'); ?></h1>
 
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'main-navigation',
-                                'container' => 'nav',
-                                'container_class' => 'nav',
-                                'menu_class' => 'ul'
-                            )
-                        );
+                        </div>
 
-                        ?>
 
-                    </nav>
-                </div>
-
-                <div class="nav-header__overlay_container_textes">
-                    <h1><?php the_field('header__nomlogo'); ?></h1>
-                    <p><?php the_field('header__txt'); ?></p>
-                    
-                    <div class="nav-header__overlay_container_textes_bouton">
-                        <a href="<?php the_field('header__lienpage'); ?>">Prendre Rendez-vous</a>
                     </div>
+
+                    <div class="nav-header__overlay_container_block_droit">
+                        <div class="nav-header__overlay_container_block_droit_logo" id="logo"><?php afficher_logo(); ?></div>
+
+                        <nav class="nav-header__overlay_container_block_droit_menus">
+
+                            <?php
+
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'main-navigation',
+                                    'container' => 'nav',
+                                    'container_class' => 'nav',
+                                    'menu_class' => 'ul'
+                                )
+                            );
+
+                            ?>
+
+                        </nav>
+                    </div>
+
                 </div>
+
             </div>
 
+            <div class="nav-header__overlay_container2">
+                <div class="nav-header__overlay_container2_bas">
+
+                    <div class="nav-header__overlay_container2_bas_bouton">
+                        <a href="<?php the_field('header__lienpage'); ?>">Prendre Rendez-vous</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </header>
+
+    <div class="bandes-bleu">
+        <p><?php the_field('header__txt'); ?></p>
+    </div>

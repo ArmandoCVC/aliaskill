@@ -1,10 +1,10 @@
 
 .nav-header
-    height: 100vh
+    height: 87vh
 
     &__overlay
         background-color: rgba(2, 2, 2, 70%)
-        height: 100vh
+        height: 87vh
         padding: 5rem 0 0 0
 
         &_container
@@ -13,55 +13,79 @@
             margin-inline: auto
             padding-inline: 1rem
 
-            &_box-logo
+            &_block
+
                 display: flex
-                justify-content: space-between
-                align-items: center
 
-                &_logo
-                    width: 5rem
-
-                &_menus
-
+                &_gauche
+                    // border: 1px red solid
+                    width: 85%
                     display: flex
                     justify-content: center
-                    ul
-                        display: flex
+                    height: 28rem
 
-                        li
-                            margin-right: 2rem
-                            a
-                                font-family: 'Roboto'
-                                // font-weight: 300
-                                text-decoration: none
-                                font-size: 1.1rem
-                                color: $txt-blanc
+                    &_textes
+                        margin-top: 25rem
 
-                        .current_page_item a
-                            color: green
+                        h1
+                            color: $txt-blanc
+                            font-size: 4rem
+                            font-family: 'Roboto'
 
-            &_textes
-                margin-top: 15rem
+                &_droit
+                    // border: 1px green solid
+                    align-items: center
 
-                h1
-                    font-size: 4rem
-                    font-family: 'Roboto'
-                    // font-weight: 500
-                    color: $txt-blanc
-                p
-                    font-size: 1.5rem
-                    font-family: 'Roboto'
-                    // font-weight: 300
-                    color: $txt-blanc
+                    &_logo
+                        width: 9rem
+
+                    &_menus
+                        margin-top: 13rem
+                        ul
+                            li
+                                margin-top: 0.5rem
+
+                                a
+                                    color: $txt-blanc
+                                    text-decoration: none
+                                    font-family: 'Roboto'
+                                a:hover
+                                    color: $txt-bleu
+                                    text-decoration: none
+
+        &_container2
+            width: 100%
+            max-width: 1200px
+            margin-inline: auto
+            padding-inline: 1rem
+
+            &_bas
+                // border: 1px white solid
+                width: 70%
+                display: flex
+                justify-content: right
+                margin-top: 7rem
 
                 &_bouton
-                    margin-top: 4.5rem
                     a
-                        border: 1px $bg-blanc solid
-                        padding: 1rem 2rem
                         text-decoration: none
                         color: $txt-blanc
+                        border: 2.5px #fff solid
+                        width: 8.5rem
+                        padding: 1.4rem 2.3rem
                         font-family: 'Roboto'
                     a:hover
-                        background-color: $bg-bleu
                         color: $txt-blanc
+                                // border: 2.5px $txt-rouge solid
+                        background-color: $bg-bleu
+
+.bandes-bleu
+    background-color: $bg-bleu
+    padding: 1rem 0
+    align-items: center
+
+    p
+        font-family: 'Roboto'
+        color: $txt-blanc
+        text-align: center
+        font-size: 1.2rem
