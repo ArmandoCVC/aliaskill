@@ -105,8 +105,7 @@ Version: 1.3
 
 .footer {
   background-color: #0e0d0d;
-  height: 50rem;
-  padding-top: 5rem;
+  padding: 3rem 0;
 }
 .footer__container {
   width: 100%;
@@ -116,28 +115,26 @@ Version: 1.3
 }
 .footer__container_titre {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Rosarivo";
   color: #fff;
+  margin-bottom: 2rem;
 }
 .footer__container_coordonnees {
   display: flex;
-  margin-top: 6rem;
   justify-content: space-between;
 }
 .footer__container_coordonnees_texte1 {
   color: #fff;
   font-family: "Roboto";
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 200;
 }
 .footer__container_coordonnees_liens {
   color: #fff;
   font-family: "Roboto";
-  font-size: 1.2rem;
-}
-.footer__container_coordonnees_liens_tel {
-  margin: 2rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
 }
 .footer__container_coordonnees_liens a {
   text-decoration: none;
@@ -149,13 +146,12 @@ Version: 1.3
 .footer__container_coordonnees_texte2 {
   color: #fff;
   font-family: "Roboto";
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 200;
 }
 .footer__container_reseau {
   display: flex;
   justify-content: center;
-  margin-top: 10rem;
 }
 .footer__container_reseau_card {
   width: fit-content;
@@ -169,8 +165,8 @@ Version: 1.3
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
 .footer__container_reseau_card_socialContainer {
-  width: 52px;
-  height: 52px;
+  width: 30px;
+  height: 30px;
   background-color: rgb(44, 44, 44);
   display: flex;
   align-items: center;
@@ -186,7 +182,7 @@ Version: 1.3
   transition-duration: 0.3s;
 }
 .footer__container_copyright {
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: center;
   color: #fff;
   font-family: "Roboto";
@@ -986,12 +982,10 @@ Version: 1.3
 }
 .formation1__container_box1_img img {
   height: 100%;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-radius: 25px;
 }
 .formation1__container_box1_textes {
   padding: 2rem;
-  background-color: #4B6D49;
   height: auto;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -999,14 +993,14 @@ Version: 1.3
 .formation1__container_box1_textes h1 {
   font-family: "Roboto";
   font-family: 500;
-  color: #fff;
+  color: #0D3F6B;
   font-size: 2.2rem;
 }
 .formation1__container_box1_textes p {
   margin-top: 1rem;
   font-family: "Roboto";
   font-size: 1rem;
-  color: #fff;
+  color: #0D3F6B;
   font-weight: 300;
 }
 
