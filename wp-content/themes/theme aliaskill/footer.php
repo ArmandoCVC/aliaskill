@@ -54,6 +54,9 @@
         <p class="footer__container_copyright">
             <?php the_field('copyright__footer'); ?>
         </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime a blanditiis id dolor exercitationem necessitatibus veritatis harum, sed explicabo similique beatae perspiciatis nam ducimus tenetur voluptatum sint mollitia cumque architecto eveniet dicta velit fuga incidunt adipisci. Accusamus similique libero consequatur soluta sapiente temporibus itaque impedit quia maiores, nulla sint enim.
+        </p>
 
     </div>
 
