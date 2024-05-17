@@ -364,44 +364,45 @@ Version: 1.3
 }
 .home .accueil2__container_4poles {
   margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.5rem;
-  height: 35rem;
+  margin-bottom: 55rem;
+  height: 11rem;
+}
+.home .accueil2__container_4poles_pole {
+  margin-top: 2rem;
 }
 .home .accueil2__container_4poles_pole_overlay {
   background-color: rgba(14, 13, 13, 0.58);
-  height: 35rem;
+  height: 11rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: space-around;
+  width: 100%;
+  padding: 2rem 0;
 }
 .home .accueil2__container_4poles_pole_overlay_textes {
   display: flex;
   justify-content: center;
-  padding: 3rem;
 }
 .home .accueil2__container_4poles_pole_overlay_textes h1 {
   color: #fff;
   font-family: "Roboto";
-  font-family: 700;
+  font-weight: 500;
   font-size: 1.2rem;
 }
-.home .accueil2__container_4poles_pole_overlay_boutton {
+.home .accueil2__container_4poles_pole_overlay_textes_bouton {
   text-align: center;
 }
-.home .accueil2__container_4poles_pole_overlay_boutton a {
+.home .accueil2__container_4poles_pole_overlay_textes_bouton a {
   text-decoration: none;
   color: #fff;
-  border: 2.5px #fff solid;
-  width: 8.5rem;
-  padding: 1.4rem 2.3rem;
+  border: 1px #fff solid;
+  padding: 1rem 1.5rem;
   font-family: "Roboto";
 }
-.home .accueil2__container_4poles_pole_overlay_boutton a:hover {
-  color: #fff;
-  background-color: #0D3F6B;
+.home .accueil2__container_4poles_pole_overlay_textes_bouton a:hover {
+  color: #0D3F6B;
+  background-color: #fff;
 }
 .home .accueil3__container {
   width: 100%;
@@ -1005,7 +1006,7 @@ Version: 1.3
 }
 
 .formation2 {
-  margin-bottom: 5rem;
+  margin-bottom: 55rem;
 }
 .formation2__box_container {
   width: 100%;
@@ -1028,23 +1029,24 @@ Version: 1.3
   padding-inline: 1rem;
 }
 .formation2__box_container2_4poles {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  height: 35rem;
+  height: 11rem;
+}
+.formation2__box_container2_4poles_pole {
+  margin-top: 2rem;
 }
 .formation2__box_container2_4poles_pole_overlay {
   background-color: rgba(14, 13, 13, 0.58);
-  height: 35rem;
+  height: 11rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: space-around;
+  width: 100%;
+  padding: 2rem 0;
 }
 .formation2__box_container2_4poles_pole_overlay_textes {
   display: flex;
   justify-content: center;
-  padding: 3rem;
 }
 .formation2__box_container2_4poles_pole_overlay_textes h1 {
   color: #fff;
@@ -1058,9 +1060,8 @@ Version: 1.3
 .formation2__box_container2_4poles_pole_overlay_bouton a {
   text-decoration: none;
   color: #fff;
-  border: 2.5px #fff solid;
-  width: 8.5rem;
-  padding: 1.4rem 2.3rem;
+  border: 1px #fff solid;
+  padding: 1rem 1.5rem;
   font-family: "Roboto";
 }
 .formation2__box_container2_4poles_pole_overlay_bouton a:hover {
@@ -1505,11 +1506,11 @@ Version: 1.3
 }
 .module2__container_grid_carte2_haut {
   background-color: #0D3F6B;
-  height: 10rem;
+  height: 7rem;
 }
 .module2__container_grid_carte2_haut_overlay {
   background-color: rgba(0, 0, 0, 0.55);
-  height: 10rem;
+  height: 7rem;
   padding: 3rem 1rem 0 1rem;
 }
 .module2__container_grid_carte2_haut_overlay_titre {
@@ -1545,18 +1546,18 @@ Version: 1.3
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .module2__container_grid2_carte {
   border-radius: 20px;
 }
 .module2__container_grid2_carte_haut {
   background-color: #4B6D49;
-  height: 10rem;
+  height: 7rem;
 }
 .module2__container_grid2_carte_haut_overlay {
   background-color: rgba(0, 0, 0, 0.55);
-  height: 10rem;
+  height: 7rem;
   padding: 3rem 1rem 0 1rem;
 }
 .module2__container_grid2_carte_haut_overlay_titre {

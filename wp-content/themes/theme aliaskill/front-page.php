@@ -101,14 +101,14 @@
 
         <div class="accueil2__container_4poles">
 
-            <?php
-            $args = array(
-                'post_type' => 'les_poles',
-                'posts_per_page' => 5,
-                'orderby' => 'date',
-                'order' => 'DESC',
-            );
-            ?>
+            <!-- <?php
+                    $args = array(
+                        'post_type' => 'les_poles',
+                        'posts_per_page' => 5,
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                    );
+                    ?>
 
             <?php $the_query = new WP_Query($args); ?>
 
@@ -137,7 +137,36 @@
             <?php endif; ?>
 
             <?php wp_reset_query(); ?>
-            <?php wp_reset_postdata(); ?>
+            <?php wp_reset_postdata(); ?> -->
+            <?php
+            $terms = get_terms(array(
+                'taxonomy' => 'parcours',
+                'hide_empty' => true,
+                'parent' => 0, // Ne récupérer que les termes de plus haut niveau
+            ));
+            ?>
+
+
+            <?php foreach ($terms as $term) : ?>
+
+                <div class="formation2__box_container2_4poles_pole" style="background-image: url('<?php the_field('formation__section2_carte_img', $term); ?>'); background-size:cover; background-position:center; ">
+
+                    <div class="formation2__box_container2_4poles_pole_overlay">
+
+                        <div class="formation2__box_container2_4poles_pole_overlay_textes">
+                            <h1>
+                                <?php echo $term->name; ?> </h1>
+                        </div>
+
+                        <div class="formation2__box_container2_4poles_pole_overlay_bouton">
+                            <a href="<?php echo get_term_link($term); ?>">Voire</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            <?php endforeach; ?>
+
         </div>
 
     </div>
@@ -155,23 +184,19 @@
 
         <div class="accueil3__container_partenaires">
 
-            <?php if (have_rows('accueil__repeteur-partenaires')) : ?>
-                <?php while (the_repeater_field('accueil__repeteur-partenaires')) : ?>
-
-                    <div class="accueil3__container_partenaires_img">
-                        <img src="<?php the_sub_field('accueil__repeteur-partenaires_img'); ?>" alt="" srcset="">
-                    </div>
-                    <div class="accueil3__container_partenaires_img">
-                        <img src="<?php the_sub_field('accueil__repeteur-partenaires_img'); ?>" alt="" srcset="">
-                    </div>
-                    <div class="accueil3__container_partenaires_img">
-                        <img src="<?php the_sub_field('accueil__repeteur-partenaires_img'); ?>" alt="" srcset="">
-                    </div>
 
 
-                <?php endwhile; ?>
-            <?php else : ?>
-            <?php endif; ?>
+            <div class="accueil3__container_partenaires_img">
+                <img src="<?php the_sub_field('accueil__partenaires_img1'); ?>" alt="" srcset="">
+            </div>
+            <div class="accueil3__container_partenaires_img">
+                <img src="<?php the_sub_field('accueil__partenaires_img2'); ?>" alt="" srcset="">
+            </div>
+            <div class="accueil3__container_partenaires_img">
+                <img src="<?php the_sub_field('accueil__partenaires_img3'); ?>" alt="" srcset="">
+            </div>
+
+
 
         </div>
 
