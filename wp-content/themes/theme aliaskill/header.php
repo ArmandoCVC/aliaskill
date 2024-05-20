@@ -33,6 +33,12 @@
 
                         </div>
 
+                        <div class="nav-header__overlay_container_block_gauche_bouton">
+
+                            <a href="<?php the_field('header__lienpage'); ?>">Prendre Rendez-vous</a>
+
+                        </div>
+
 
                     </div>
 
@@ -61,15 +67,7 @@
 
             </div>
 
-            <div class="nav-header__overlay_container2">
-                <div class="nav-header__overlay_container2_bas">
 
-                    <div class="nav-header__overlay_container2_bas_bouton">
-                        <a href="<?php the_field('header__lienpage'); ?>">Prendre Rendez-vous</a>
-                    </div>
-
-                </div>
-            </div>
         </div>
     </header>
 

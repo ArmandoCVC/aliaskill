@@ -40,8 +40,8 @@
         </div>
 
         <div class="accueil1__container_presentation">
-            <h1><?php the_field('accueil__valeurs_section_titre'); ?></h1>
-            <p><?php the_field('accueil__valeurs_section_description'); ?></p>
+            <h1><?php the_field('accueil__section3_titre'); ?></h1>
+            <p><?php the_field('accueil__section3_description'); ?></p>
         </div>
 
         <div class="accueil1__container_icones">
@@ -53,8 +53,8 @@
                 </div>
 
                 <div class="accueil1__container_icones_carte_textes">
-                    <h1><?php the_field('accueil__valeurs_titre1'); ?></h1>
-                    <p><?php the_field('accueil__valeurs_description1'); ?></p>
+                    <h1><?php the_field('accueil__section3_1-val-titre'); ?></h1>
+                    <p><?php the_field('accueil__section3_1-val-des'); ?></p>
                 </div>
             </div>
 
@@ -66,8 +66,8 @@
                 </div>
 
                 <div class="accueil1__container_icones_carte_textes">
-                    <h1><?php the_field('accueil__valeurs_titre2'); ?></h1>
-                    <p><?php the_field('accueil__valeurs_description2'); ?></p>
+                    <h1><?php the_field('accueil__section3_2-val-titre'); ?></h1>
+                    <p><?php the_field('accueil__section3_2-val-des'); ?></p>
                 </div>
             </div>
 
@@ -79,8 +79,8 @@
                 </div>
 
                 <div class="accueil1__container_icones_carte_textes">
-                    <h1><?php the_field('accueil__valeurs_titre3'); ?></h1>
-                    <p><?php the_field('accueil__valeurs_description3'); ?></p>
+                    <h1><?php the_field('accueil__section3_3-val-titre'); ?></h1>
+                    <p><?php the_field('accueil__section3_3-val-des'); ?></p>
                 </div>
             </div>
 
@@ -95,49 +95,13 @@
     <div class="accueil2__container">
 
         <div class="accueil2__container_textes">
-            <h1><?php the_field('accueil__section2_titre'); ?></h1>
-            <p><?php the_field('accueil__section2_paragraphe'); ?></p>
+            <h1><?php the_field('accueil__section4_titre'); ?></h1>
+            <p><?php the_field('accueil__section4_paragraphe'); ?></p>
         </div>
 
         <div class="accueil2__container_4poles">
 
-            <!-- <?php
-                    $args = array(
-                        'post_type' => 'les_poles',
-                        'posts_per_page' => 5,
-                        'orderby' => 'date',
-                        'order' => 'DESC',
-                    );
-                    ?>
-
-            <?php $the_query = new WP_Query($args); ?>
-
-            <?php if ($the_query->have_posts()) : ?>
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-
-
-                    <div class="accueil2__container_4poles_pole" style="background-image: url('<?php the_field('pole_img'); ?>'); background-size:cover; background-position:center; ">
-
-                        <div class="accueil2__container_4poles_pole_overlay">
-
-                            <div class="accueil2__container_4poles_pole_overlay_textes">
-                                <h1> <?php the_title(); ?> </h1>
-                            </div>
-
-                            <div class="accueil2__container_4poles_pole_overlay_boutton">
-                                <a href="<?php the_field('pole_lienbouton'); ?>">Détail</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                <?php endwhile; ?>
-            <?php endif; ?>
-
-            <?php wp_reset_query(); ?>
-            <?php wp_reset_postdata(); ?> -->
+         
             <?php
             $terms = get_terms(array(
                 'taxonomy' => 'parcours',
@@ -159,7 +123,7 @@
                         </div>
 
                         <div class="formation2__box_container2_4poles_pole_overlay_bouton">
-                            <a href="<?php echo get_term_link($term); ?>">Voire</a>
+                            <a href="<?php echo get_term_link($term); ?>">Voire en détail</a>
                         </div>
 
                     </div>
@@ -177,8 +141,8 @@
     <div class="accueil3__container">
 
         <div class="accueil3__container_textes">
-            <h1><?php the_field('accueil__section3_titre'); ?></h1>
-            <p><?php the_field('accueil__section3_description'); ?></p>
+            <h1><?php the_field('accueil__section5_titre'); ?></h1>
+            <p><?php the_field('accueil__section5_description'); ?></p>
 
         </div>
 
@@ -186,15 +150,25 @@
 
 
 
-            <div class="accueil3__container_partenaires_img">
-                <img src="<?php the_sub_field('accueil__partenaires_img1'); ?>" alt="" srcset="">
-            </div>
-            <div class="accueil3__container_partenaires_img">
-                <img src="<?php the_sub_field('accueil__partenaires_img2'); ?>" alt="" srcset="">
-            </div>
-            <div class="accueil3__container_partenaires_img">
-                <img src="<?php the_sub_field('accueil__partenaires_img3'); ?>" alt="" srcset="">
-            </div>
+            <?php if (have_rows('accueil__repeteur5')) : ?>
+                <?php while (the_repeater_field('accueil__repeteur5')) : ?>
+
+
+                    <?php the_sub_field('subfield_name'); ?>
+                    <div class="accueil3__container_partenaires_img">
+                        <img src="<?php the_sub_field('accueil__repeteur5_img1'); ?>" alt="" srcset="">
+                    </div>
+                    <div class="accueil3__container_partenaires_img">
+                        <img src="<?php the_sub_field('accueil__repeteur5_img2'); ?>" alt="" srcset="">
+                    </div>
+                    <div class="accueil3__container_partenaires_img">
+                        <img src="<?php the_sub_field('accueil__repeteur5_img3'); ?>" alt="" srcset="">
+                    </div>
+
+                <?php endwhile; ?>
+            <?php else : ?>
+            <?php endif; ?>
+
 
 
 

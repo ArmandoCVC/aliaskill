@@ -11,15 +11,15 @@ Version: 1.3
   src: url(assets/fonts/Rosarivo/Rosarivo-Italic.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   src: url(assets/fonts/Rosarivo/Rosarivo-Regular.ttf) format("truetype");
 }
 .nav-header {
-  height: 87vh;
+  height: 85vh;
 }
 .nav-header__overlay {
   background-color: rgba(2, 2, 2, 0.7);
-  height: 87vh;
+  height: 85vh;
   padding: 5rem 0 0 0;
 }
 .nav-header__overlay_container {
@@ -35,24 +35,45 @@ Version: 1.3
   width: 85%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 28rem;
 }
 .nav-header__overlay_container_block_gauche_textes {
-  margin-top: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav-header__overlay_container_block_gauche_textes h1 {
   color: #fff;
-  font-size: 4rem;
-  font-family: "Roboto";
+  font-size: 2.5rem;
+  font-family: "Rosarivo";
+}
+.nav-header__overlay_container_block_gauche_bouton {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.nav-header__overlay_container_block_gauche_bouton a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px #fff solid;
+  padding: 1rem 1rem;
+  font-family: "Rosarivo";
+}
+.nav-header__overlay_container_block_gauche_bouton a:hover {
+  color: #fff;
+  background-color: #0D3F6B;
 }
 .nav-header__overlay_container_block_droit {
   align-items: center;
 }
 .nav-header__overlay_container_block_droit_logo {
-  width: 9rem;
+  width: 7rem;
+  margin-left: 1rem;
 }
 .nav-header__overlay_container_block_droit_menus {
-  margin-top: 13rem;
+  margin-top: 4rem;
 }
 .nav-header__overlay_container_block_droit_menus ul li {
   margin-top: 0.5rem;
@@ -60,47 +81,22 @@ Version: 1.3
 .nav-header__overlay_container_block_droit_menus ul li a {
   color: #fff;
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
 }
 .nav-header__overlay_container_block_droit_menus ul li a:hover {
   color: #0D3F6B;
   text-decoration: none;
 }
-.nav-header__overlay_container2 {
-  width: 100%;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: 1rem;
-}
-.nav-header__overlay_container2_bas {
-  width: 70%;
-  display: flex;
-  justify-content: right;
-  margin-top: 7rem;
-}
-.nav-header__overlay_container2_bas_bouton a {
-  text-decoration: none;
-  color: #fff;
-  border: 2.5px #fff solid;
-  width: 8.5rem;
-  padding: 1.4rem 2.3rem;
-  font-family: "Roboto";
-}
-.nav-header__overlay_container2_bas_bouton a:hover {
-  color: #fff;
-  background-color: #0D3F6B;
-}
 
 .bandes-bleu {
-  background-color: #0D3F6B;
-  padding: 1rem 0;
+  background-color: #071E34;
+  padding: 0.5rem 0;
   align-items: center;
 }
 .bandes-bleu p {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #fff;
   text-align: center;
-  font-size: 1.2rem;
 }
 
 .footer {
@@ -230,6 +226,9 @@ Version: 1.3
     opacity: 1;
   }
 }
+.home .accueil1 {
+  font-family: "Rosarivo";
+}
 .home .accueil1__container {
   width: 100%;
   max-width: 1200px;
@@ -246,13 +245,13 @@ Version: 1.3
   padding: 1rem 2.5rem 0 0;
 }
 .home .accueil1__container_box1_textes h1 {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-family: 700;
   color: #0D3F6B;
   font-size: 2.5rem;
 }
 .home .accueil1__container_box1_textes p {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-size: 1rem;
   font-weight: 400;
 }
@@ -274,14 +273,14 @@ Version: 1.3
   height: auto;
 }
 .home .accueil1__container_box2_textes h1 {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-family: 700;
   color: #fff;
   font-size: 2.2rem;
 }
 .home .accueil1__container_box2_textes p {
   margin-top: 1rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-size: 1rem;
   color: #fff;
   font-weight: 400;
@@ -293,12 +292,12 @@ Version: 1.3
   text-align: center;
   margin-top: 1rem;
   font-size: 2.5rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #0D3F6B;
 }
 .home .accueil1__container_presentation p {
   margin-top: 1rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-size: 1rem;
   color: #0D3F6B;
   font-weight: 400;
@@ -335,12 +334,12 @@ Version: 1.3
   text-align: center;
   margin-top: 1rem;
   font-size: 1.9rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #0D3F6B;
 }
 .home .accueil1__container_icones_carte_textes p {
   text-align: center;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-weight: 400;
 }
 .home .accueil2__container {
@@ -351,14 +350,14 @@ Version: 1.3
 }
 .home .accueil2__container_textes h1 {
   text-align: center;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-family: 700;
   font-size: 2.5rem;
   color: #0D3F6B;
 }
 .home .accueil2__container_textes p {
   text-align: center;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-size: 1rem;
   font-weight: 400;
 }
@@ -386,7 +385,7 @@ Version: 1.3
 }
 .home .accueil2__container_4poles_pole_overlay_textes h1 {
   color: #fff;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-weight: 500;
   font-size: 1.2rem;
 }
@@ -398,7 +397,7 @@ Version: 1.3
   color: #fff;
   border: 1px #fff solid;
   padding: 1rem 1.5rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
 }
 .home .accueil2__container_4poles_pole_overlay_textes_bouton a:hover {
   color: #0D3F6B;
@@ -417,13 +416,13 @@ Version: 1.3
 .home .accueil3__container_textes h1 {
   color: #0D3F6B;
   font-size: 2.5rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-weight: 500;
   text-align: center;
 }
 .home .accueil3__container_textes p {
   color: #0D3F6B;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   font-weight: 400;
 }
 .home .accueil3__container_partenaires {
@@ -437,6 +436,7 @@ Version: 1.3
 }
 .home .accueil3__container_partenaires_img img {
   border-radius: 20px;
+  width: 10rem;
 }
 
 .pole1__banniere {
@@ -805,7 +805,7 @@ Version: 1.3
 }
 .equipe__container_article1_haut h1 {
   font-size: 2.5rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #0D3F6B;
   margin-left: 2rem;
 }
@@ -829,15 +829,15 @@ Version: 1.3
 }
 .equipe__container_article2_haut h1 {
   font-size: 2.5rem;
-  font-family: "Roboto";
-  color: #fff;
+  font-family: "Rosarivo";
+  color: white;
   margin-left: 2rem;
 }
 .equipe__container_article2_bas {
   margin-top: 2rem;
 }
 .equipe__container_article2_bas p {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #fff;
 }
 .equipe__container_article3 {
@@ -856,7 +856,7 @@ Version: 1.3
 }
 .equipe__container_article3_haut h1 {
   font-size: 2.5rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #0D3F6B;
   margin-left: 2rem;
 }
@@ -864,7 +864,7 @@ Version: 1.3
   margin-top: 2rem;
 }
 .equipe__container_article3_bas p {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #0D3F6B;
 }
 .equipe__container_article4 {
@@ -884,7 +884,7 @@ Version: 1.3
 }
 .equipe__container_article4_haut h1 {
   font-size: 2.5rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #fff;
   margin-left: 2rem;
 }
@@ -892,7 +892,7 @@ Version: 1.3
   margin-top: 2rem;
 }
 .equipe__container_article4_bas p {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #fff;
 }
 .equipe__container_article5 {
@@ -911,7 +911,7 @@ Version: 1.3
 }
 .equipe__container_article5_haut h1 {
   font-size: 2.5rem;
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #0D3F6B;
   margin-left: 2rem;
 }
@@ -919,7 +919,7 @@ Version: 1.3
   margin-top: 2rem;
 }
 .equipe__container_article5_bas p {
-  font-family: "Roboto";
+  font-family: "Rosarivo";
   color: #0D3F6B;
 }
 
