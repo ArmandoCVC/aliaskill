@@ -17,37 +17,50 @@
             margin-bottom: 2rem
 
         &_coordonnees
-            display: flex
+            display: grid
             // justify-content: center
             // margin-top: 6rem
-            justify-content: space-between
+            grid-template-columns: repeat(3,1fr)
+            gap: 2fr
+            // margin-top: 3rem
 
             &_texte1
                 color: $txt-blanc
                 font-family: 'Roboto'
                 font-size: 1rem
                 font-weight: 200
+                display: flex
+                justify-content: center
+
 
             &_liens
-                color: $txt-blanc
+                color: white
                 font-family: 'Roboto'
                 font-size: 1rem
-                margin-top: 2rem
+                // margin-top: 2rem
+           
 
                 &_tel
-                    // margin: 2rem 0
-
+                    margin-top: 1rem
+                    // border: 1px solid yellow
+                    display: flex
+                    justify-content: center
                 a
                     text-decoration: none
-                    color: $txt-blanc
+                    color: white
+                    display: flex
+                    justify-content: center
                 a:hover
                     color: $txt-vert
 
+
             &_texte2
-                color: $txt-blanc
+                color: white
                 font-family: 'Roboto'
                 font-size: 1rem
                 font-weight: 200
+                display: flex
+                justify-content: center
 
         &_reseau
             display: flex

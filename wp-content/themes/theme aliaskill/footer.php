@@ -2,7 +2,7 @@
 
 <footer class="footer">
     <div class=footer__container>
-        <h1 class="footer__container_titre"><?php the_field('titre__footer'); ?> </h1>
+        <h1 class="footer__container_titre">Contactez Moi </h1>
 
 
         <div class="footer__container_coordonnees">
@@ -51,12 +51,6 @@
 
         </div>
 
-        <p class="footer__container_copyright">
-            <?php the_field('copyright__footer'); ?>
-        </p>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime a blanditiis id dolor exercitationem necessitatibus veritatis harum, sed explicabo similique beatae perspiciatis nam ducimus tenetur voluptatum sint mollitia cumque architecto eveniet dicta velit fuga incidunt adipisci. Accusamus similique libero consequatur soluta sapiente temporibus itaque impedit quia maiores, nulla sint enim.
-        </p>
 
     </div>
 
