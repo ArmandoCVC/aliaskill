@@ -17,10 +17,20 @@ Version: 1.3
 .nav-header {
   height: 85vh;
 }
+@media screen and (min-width: 1900px) {
+  .nav-header {
+    height: 90vh;
+  }
+}
 .nav-header__overlay {
   background-color: rgba(2, 2, 2, 0.7);
   height: 85vh;
   padding: 5rem 0 0 0;
+}
+@media screen and (min-width: 1900px) {
+  .nav-header__overlay {
+    height: 90vh;
+  }
 }
 .nav-header__overlay_container {
   width: 100%;
@@ -31,28 +41,49 @@ Version: 1.3
 .nav-header__overlay_container_block {
   display: flex;
 }
+@media screen and (min-width: 1900px) {
+  .nav-header__overlay_container_block {
+    margin-top: 10rem;
+  }
+}
 .nav-header__overlay_container_block_gauche {
+  border: 1px yellow solid;
   width: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 28rem;
 }
 .nav-header__overlay_container_block_gauche_textes {
+  border: 1px red solid;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .nav-header__overlay_container_block_gauche_textes {
+    margin-top: 10rem;
+  }
 }
 .nav-header__overlay_container_block_gauche_textes h1 {
   color: #fff;
   font-size: 2.5rem;
   font-family: "Rosarivo";
 }
+@media screen and (min-width: 1900px) {
+  .nav-header__overlay_container_block_gauche_textes h1 {
+    font-size: 3rem;
+  }
+}
 .nav-header__overlay_container_block_gauche_bouton {
+  border: 1px pink solid;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+}
+@media screen and (min-width: 1200px) {
+  .nav-header__overlay_container_block_gauche_bouton {
+    margin-top: 3rem;
+  }
 }
 .nav-header__overlay_container_block_gauche_bouton a {
   text-decoration: none;

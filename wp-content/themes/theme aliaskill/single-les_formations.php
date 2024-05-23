@@ -91,7 +91,7 @@
 
                 <div class="pole2__article2_container_icones_carte">
                     <div class="pole2__article2_container_icones_carte_img">
-               
+
                         <svg class="pole2__article2_container_icones_carte_img_svg3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path fill="#74C0FC" d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" />
                         </svg>
@@ -191,7 +191,7 @@
     <div class="pole4__container">
 
         <div class="pole4__container_titre">
-            <h1>Les autres domaines de formations</h1>
+            <h1>Les autres modules de formation liée à <span><?php single_term_title(); ?> </span></h1>
         </div>
 
         <div class="pole4__container_4poles">
@@ -200,42 +200,57 @@
             // Récupérer l'ID du produit actuellement affiché
             $current_product_id = get_the_ID();
 
-            // Args pour la requête WP_Query
-            $args = array(
-                'post_type'      => 'les_poles',
-                'posts_per_page' => 4,
-                'orderby'        => 'date',
-                'order'          => 'DESC',
-                'post__not_in'   => array($current_product_id), // Exclure le produit actuel
-            );
+            // Récupérer les termes associés au produit actuel dans la taxonomy 'parcours'
+            $current_terms = wp_get_post_terms($current_product_id, 'parcours');
+
+            if ($current_terms && !is_wp_error($current_terms)) {
+                // Récupérer les IDs des termes enfants
+                $current_term_ids = wp_list_pluck($current_terms, 'term_id');
+
+                // Args pour la requête WP_Query
+                $args = array(
+                    'post_type'      => 'les_formations',
+                    'posts_per_page' => -1,
+                    'orderby'        => 'date',
+                    'order'          => 'DESC',
+                    'post__not_in'   => array($current_product_id), // Exclure le produit actuel
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => 'parcours',
+                            'field'    => 'term_id',
+                            'terms'    => $current_term_ids, // Récupérer les posts associés aux termes enfants
+                        ),
+                    ),
+                );
+
+                $the_query = new WP_Query($args);
+
+                if ($the_query->have_posts()) : ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <article class="module2__container_grid_carte2">
+                            <div class="module2__container_grid_carte2_haut">
+                                <div class="module2__container_grid_carte2_haut_overlay">
+                                    <div class="module2__container_grid_carte2_haut_overlay_titre">
+                                        <h1><?php the_title(); ?></h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="module2__container_grid_carte2_bas">
+                                <div class="module2__container_grid_carte2_bas_bouton">
+                                    <a href="<?php echo the_permalink(); ?>">Voir en détails</a>
+                                </div>
+                            </div>
+                        </article>
+                    <?php endwhile; ?>
+            <?php endif;
+
+                wp_reset_query();
+                wp_reset_postdata();
+            } else {
+                echo 'Aucun terme trouvé.';
+            }
             ?>
 
-            <?php $the_query = new WP_Query($args); ?>
-
-            <?php if ($the_query->have_posts()) : ?>
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-                    <div class="pole4__container_4poles_pole" style="background-image: url('<?php the_field('pole_img'); ?>'); background-size:cover; background-position:center; ">
-
-                        <div class="pole4__container_4poles_pole_overlay">
-
-                            <div class="pole4__container_4poles_pole_overlay_textes">
-                                <h1> <?php the_title(); ?> </h1>
-                            </div>
-
-                            <div class="pole4__container_4poles_pole_overlay_boutton">
-                                <a href="<?php the_field('pole_lienbouton'); ?>">Détail</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                <?php endwhile; ?>
-            <?php endif; ?>
-
-            <?php wp_reset_query(); ?>
-            <?php wp_reset_postdata(); ?>
         </div>
 
     </div>
