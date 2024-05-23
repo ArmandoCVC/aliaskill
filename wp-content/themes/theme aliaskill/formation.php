@@ -59,7 +59,7 @@
                                 </div>
 
                                 <div class="formation2__box_container2_4poles_pole_overlay_bouton">
-                                    <a href="<?php echo get_term_link($term); ?>">Voire</a>
+                                    <a href="<?php echo get_term_link($term); ?>">Voir</a>
                                 </div>
 
                             </div>
