@@ -63,7 +63,7 @@
                         </div>
                         <div class="module2__container_grid_carte2_bas">
                             <div class="module2__container_grid_carte2_bas_bouton">
-                                <a href="<?php echo get_permalink($module->ID); ?>">Voir en détails</a>
+                                <a href="<?php echo get_permalink($module->ID); ?>">Voire en détails</a>
                             </div>
                         </div>
                     </article>
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="module2__container_grid2_carte_bas">
                                     <div class="module2__container_grid2_carte_bas_bouton">
-                                        <a href="<?php echo get_term_link($child_term); ?>">Voir les modules</a>
+                                        <a href="<?php echo get_term_link($child_term); ?>">Voire les modules</a>
                                     </div>
                                 </div>
                             </article>
